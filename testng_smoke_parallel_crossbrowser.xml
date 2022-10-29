@@ -17,7 +17,7 @@
   </test> <!-- Test -->
   
   <test  name="SmokeTest2">
-  	<parameter name="browser" value="edge"></parameter>
+  	<parameter name="browser" value="Chrome"></parameter>
 	<groups>
 		<run>
 			<include name="Smoke"></include>
