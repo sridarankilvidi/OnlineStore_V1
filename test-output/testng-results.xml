@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="8" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-29T13:15:30 EDT" name="Suite" finished-at="2022-10-29T13:16:14 EDT" duration-ms="43527">
+    <groups>
+      <group name="Smoke">
+        <method signature="indexPageTest.verifyLogo()[pri:0, instance:testCases.indexPageTest@36fc695d]" name="verifyLogo" class="testCases.indexPageTest"/>
+        <method signature="indexPageTest.verifyTitle()[pri:1, instance:testCases.indexPageTest@36fc695d]" name="verifyTitle" class="testCases.indexPageTest"/>
+        <method signature="indexPageTest.clickOnSignInTest()[pri:2, instance:testCases.indexPageTest@36fc695d]" name="clickOnSignInTest" class="testCases.indexPageTest"/>
+        <method signature="indexPageTest.verifyLogo()[pri:0, instance:testCases.indexPageTest@3cd3e762]" name="verifyLogo" class="testCases.indexPageTest"/>
+        <method signature="indexPageTest.verifyTitle()[pri:1, instance:testCases.indexPageTest@3cd3e762]" name="verifyTitle" class="testCases.indexPageTest"/>
+        <method signature="indexPageTest.clickOnSignInTest()[pri:2, instance:testCases.indexPageTest@3cd3e762]" name="clickOnSignInTest" class="testCases.indexPageTest"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2022-10-29T13:15:30 EDT" name="SmokeTest1" finished-at="2022-10-29T13:16:08 EDT" duration-ms="38334">
+      <class name="testCases.indexPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.indexPageTest@36fc695d]" started-at="2022-10-29T13:15:30 EDT" name="setup" finished-at="2022-10-29T13:15:42 EDT" duration-ms="11891" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogo()[pri:0, instance:testCases.indexPageTest@36fc695d]" started-at="2022-10-29T13:15:42 EDT" name="verifyLogo" finished-at="2022-10-29T13:15:42 EDT" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogo -->
+        <test-method signature="verifyTitle()[pri:1, instance:testCases.indexPageTest@36fc695d]" started-at="2022-10-29T13:15:42 EDT" name="verifyTitle" finished-at="2022-10-29T13:15:42 EDT" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="clickOnSignInTest()[pri:2, instance:testCases.indexPageTest@36fc695d]" started-at="2022-10-29T13:15:42 EDT" name="clickOnSignInTest" finished-at="2022-10-29T13:16:08 EDT" duration-ms="26082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnSignInTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.indexPageTest@36fc695d]" started-at="2022-10-29T13:16:08 EDT" name="tearDown" finished-at="2022-10-29T13:16:08 EDT" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.indexPageTest -->
+    </test> <!-- SmokeTest1 -->
+    <test started-at="2022-10-29T13:15:30 EDT" name="SmokeTest2" finished-at="2022-10-29T13:16:14 EDT" duration-ms="43526">
+      <class name="testCases.indexPageTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:testCases.indexPageTest@3cd3e762]" started-at="2022-10-29T13:15:30 EDT" name="loadConfig" finished-at="2022-10-29T13:15:30 EDT" duration-ms="367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.indexPageTest@3cd3e762]" started-at="2022-10-29T13:15:30 EDT" name="setup" finished-at="2022-10-29T13:15:48 EDT" duration-ms="17399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogo()[pri:0, instance:testCases.indexPageTest@3cd3e762]" started-at="2022-10-29T13:15:48 EDT" name="verifyLogo" finished-at="2022-10-29T13:15:48 EDT" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogo -->
+        <test-method signature="verifyTitle()[pri:1, instance:testCases.indexPageTest@3cd3e762]" started-at="2022-10-29T13:15:48 EDT" name="verifyTitle" finished-at="2022-10-29T13:15:48 EDT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method signature="clickOnSignInTest()[pri:2, instance:testCases.indexPageTest@3cd3e762]" started-at="2022-10-29T13:15:48 EDT" name="clickOnSignInTest" finished-at="2022-10-29T13:16:13 EDT" duration-ms="25786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnSignInTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.indexPageTest@3cd3e762]" started-at="2022-10-29T13:16:13 EDT" name="tearDown" finished-at="2022-10-29T13:16:14 EDT" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:testCases.indexPageTest@3cd3e762]" started-at="2022-10-29T13:16:14 EDT" name="afterSuite" finished-at="2022-10-29T13:16:14 EDT" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testCases.indexPageTest -->
+    </test> <!-- SmokeTest2 -->
+  </suite> <!-- Suite -->
+</testng-results>

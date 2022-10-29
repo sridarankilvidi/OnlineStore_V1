@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+<listeners>
+	<listener class-name="Utility.listenerClass"></listener>
+</listeners> 
+  <test  name="SmokeTest1">
+  	<parameter name="browser" value="Chrome"></parameter>
+	<groups>
+		<run>
+			<include name="Smoke"></include>
+		</run>
+	</groups>
+    <classes>
+      <class name="testCases.indexPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

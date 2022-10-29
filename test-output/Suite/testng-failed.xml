@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utility.listenerClass"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="SmokeTest2(failed)">
+    <parameter name="browser" value="IE"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.indexPageTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="afterSuite"/>
+          <include name="clickOnSignInTest"/>
+          <include name="tearDown"/>
+          <include name="verifyLogo"/>
+          <include name="verifyTitle"/>
+        </methods>
+      </class> <!-- testCases.indexPageTest -->
+    </classes>
+  </test> <!-- SmokeTest2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
