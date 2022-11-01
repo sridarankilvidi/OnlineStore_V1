@@ -23,7 +23,8 @@ public class baseClass {
 	
 	public static Properties prop;
 
-	// Declare ThreadLocal Driver
+	// Declare ThreadLocal Driver--and underneath it creates a hashmap of threadid and browserid
+	// this threadlocal hashmap facilitates parallel execution of tests without sharing the data between threads 
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
 
 	//loadConfig method is to load the configuration
@@ -65,6 +66,7 @@ public class baseClass {
 			driver.set(new EdgeDriver());//InternetExplorerDriver()
 		}
 		log.info("============="+browserName +"browser initiated=========");
+		//here get the driver instance from the driver hashmap 
 		//Maximize the screen
 		getDriver().manage().window().maximize();
 		//Delete all the cookies

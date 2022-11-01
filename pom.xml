@@ -94,7 +94,7 @@
           <version>2.22.1</version>
           <configuration>
           	<suiteXmlFiles>
-          		<suiteXmlFile>testng_smoke_parallel_crossbrowser.xml</suiteXmlFile>       		
+          		<suiteXmlFile>${xmlFiles}</suiteXmlFile>       		
           	</suiteXmlFiles>
           </configuration>
         </plugin>
