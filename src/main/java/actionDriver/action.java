@@ -310,6 +310,12 @@ public class action extends baseClass implements actionInterface{
 		// This new path for jenkins
 		String newImageString = "http://localhost:8080/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
 				+ dateName + ".png";
+		
+		try {
+			FileUtils.copyFile(source, new File(newImageString));
+		} catch (Exception e) {
+			e.getMessage();
+		}
 		return newImageString;
 		//return destination;
 	}
