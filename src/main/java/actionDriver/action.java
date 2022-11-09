@@ -20,12 +20,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.baseClass;
 
 public class action extends baseClass implements actionInterface{
-
+	Actions act;
+	
 	@Override
 	public void scrollByVisibilityOfElement(WebDriver driver, WebElement ele) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", ele);
-		
 	}
 
 	@Override
@@ -55,8 +55,25 @@ public class action extends baseClass implements actionInterface{
 
 	@Override
 	public boolean type(WebElement ele, String text) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean flag = false;
+		try {
+			flag = ele.isDisplayed();
+			ele.clear();
+			ele.sendKeys(text);
+			// logger.info("Entered text :"+text);
+			flag = true;
+		} catch (Exception e) {
+			System.out.println("Location Not found");
+			flag = false;
+		} finally {
+			if (flag) {
+				System.out.println("Successfully entered value");
+			} else {
+				System.out.println("Unable to enter value");
+			}
+
+		}
+		return flag;
 	}
 
 	@Override
@@ -80,9 +97,20 @@ public class action extends baseClass implements actionInterface{
 	}
 
 	@Override
-	public boolean isSelected(WebDriver ldriver, WebElement ele) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isSelected(WebDriver driver, WebElement ele) {
+		boolean flag = false;
+		flag = findElement(driver, ele);
+		if (flag) {
+			flag = ele.isSelected();
+			if (flag) {
+				System.out.println("The element is Selected");
+			} else {
+				System.out.println("The element is not Selected");
+			}
+		} else {
+			System.out.println("Not selected ");
+		}
+		return flag;
 	}
 
 	@Override
@@ -123,8 +151,28 @@ public class action extends baseClass implements actionInterface{
 
 	@Override
 	public boolean JSClick(WebDriver driver, WebElement ele) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean flag = false;
+		try {
+			// WebElement element = driver.findElement(locator);
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			executor.executeScript("arguments[0].click();", ele);
+			// driver.executeAsyncScript("arguments[0].click();", element);
+
+			flag = true;
+
+		}
+
+		catch (Exception e) {
+			throw e;
+
+		} finally {
+			if (flag) {
+				System.out.println("Click Action is performed");
+			} else if (!flag) {
+				System.out.println("Click Action is not performed");
+			}
+		}
+		return flag;
 	}
 
 	@Override
@@ -308,16 +356,12 @@ public class action extends baseClass implements actionInterface{
 			e.getMessage();
 		}
 		// This new path for jenkins
+		/*
 		String newImageString = "http://localhost:8080/job/MyStoreProject/ws/MyStoreProject/ScreenShots/" + filename + "_"
 				+ dateName + ".png";
 		
-		try {
-			FileUtils.copyFile(source, new File(newImageString));
-		} catch (Exception e) {
-			e.getMessage();
-		}
-		return newImageString;
-		//return destination;
+		return newImageString; */
+		return destination;
 	}
 
 	@Override

@@ -32,7 +32,7 @@ private SearchResultPage sp;
 	
 	@Test(priority=0,groups = "Smoke")
 	public void verifyLogo() throws Throwable {
-		log.startTestCase("verifyLogo");
+		log.startTestCase("verifyLogo for the thread: "+Thread.currentThread().getId());
 		indexPage= new indexPage();
 		boolean result=indexPage.validateLogo();
 		Assert.assertTrue(result);
@@ -41,7 +41,7 @@ private SearchResultPage sp;
 	
 	@Test(priority=1, groups = "Smoke")
 	public void verifyTitle() {
-		log.startTestCase("verifyTitle");
+		log.startTestCase("verifyTitle for the thread :"+Thread.currentThread().getId());
 		String actTitle=indexPage.getMyStoreTitle();
 		Assert.assertEquals(actTitle, "My Store");
 		log.endTestCase("verifyTitle");
@@ -49,7 +49,7 @@ private SearchResultPage sp;
 	
 	@Test(priority=2, groups = "Smoke")
 	public void clickOnSignInTest() throws Throwable {
-		log.startTestCase("clickOnSignInTest");
+		log.startTestCase("clickOnSignInTest for the thread: "+Thread.currentThread().getId());
 		lp = indexPage.clickOnSignIn();
 		Assert.assertNotNull(lp);
 		log.endTestCase("clickOnSignInTest");
@@ -61,5 +61,24 @@ private SearchResultPage sp;
 		sp = indexPage.searchProduct(prodname);
 		Assert.assertNotNull(sp);
 		log.endTestCase("searchProductTest");
+	}
+	
+	@Test(priority=4, groups = "Smoke")
+	public void verifyTitleNegative() {
+		log.startTestCase("This verifyTitle testcase is failed deliberately for the thread:" 
+				+Thread.currentThread().getId());
+		String actTitle=indexPage.getMyStoreTitleNegative();
+		Assert.assertEquals(actTitle, "My Store");
+		log.endTestCase("verifyTitle");
+	}
+	
+	@Test(priority=5,groups = "Smoke")
+	public void verifyLogoNegative() throws Throwable {
+		log.startTestCase("verifyLogo is falied deliberately for the thread: "
+				+Thread.currentThread().getId());
+		indexPage= new indexPage();
+		boolean result=indexPage.validateLogoNegative();
+		Assert.assertTrue(result);
+		log.endTestCase("verifyLogo");
 	}
 }

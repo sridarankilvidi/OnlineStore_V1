@@ -4,7 +4,7 @@
 <listeners>
 	<listener class-name="Utility.listenerClass"></listener>
 </listeners> 
-  <test  name="SmokeTest1">
+  <test  name="IndexPageTest">
   	<parameter name="browser" value="Chrome"></parameter>
 	<groups>
 		<run>
@@ -16,15 +16,15 @@
     </classes>
   </test> <!-- Test -->
   
-  <test  name="SmokeTest2">
-  	<parameter name="browser" value="Chrome"></parameter>
+  <test  name="loginPageTest">
+  	<parameter name="browser" value="edge"></parameter>
 	<groups>
 		<run>
 			<include name="Smoke"></include>
 		</run>
 	</groups>
     <classes>
-      <class name="testCases.indexPageTest"/>
+      <class name="testCases.loginPageTest"/>
     </classes>
   </test> <!-- Test -->
   

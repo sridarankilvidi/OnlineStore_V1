@@ -4,8 +4,8 @@
   <listeners>
     <listener class-name="Utility.listenerClass"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="SmokeTest1(failed)">
-    <parameter name="browser" value="FireFox"/>
+  <test thread-count="5" parallel="tests" name="IndexPageTest(failed)">
+    <parameter name="browser" value="Chrome"/>
     <groups>
       <run>
         <include name="Smoke"/>
@@ -17,12 +17,30 @@
           <include name="loadConfig"/>
           <include name="setup"/>
           <include name="afterSuite"/>
+          <include name="verifyLogoNegative"/>
           <include name="tearDown"/>
-          <include name="clickOnSignInTest"/>
-          <include name="verifyTitle"/>
-          <include name="verifyLogo"/>
+          <include name="verifyTitleNegative"/>
         </methods>
       </class> <!-- testCases.indexPageTest -->
     </classes>
-  </test> <!-- SmokeTest1(failed) -->
+  </test> <!-- IndexPageTest(failed) -->
+  <test thread-count="5" parallel="tests" name="loginPageTest(failed)">
+    <parameter name="browser" value="edge"/>
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testCases.loginPageTest">
+        <methods>
+          <include name="doLoginTestNegative"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="tearDown"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- testCases.loginPageTest -->
+    </classes>
+  </test> <!-- loginPageTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
